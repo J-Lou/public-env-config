@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: gateway-test
   chart:
-    git: git@github.com:wynnel/puma-gitops
+    git: git@github.com:J-Lou/public-env-config
     path: charts/gateway
     ref: master
   valuesFrom:
@@ -26,11 +26,11 @@ spec:
   values:
     replicaCount: 1
     container:
-      image: docker.sandbox2.apimgcp.com/repository/docker-hosted/gateway
+      image: docker.sandbox3.apimgcp.com/repository/docker-hosted/gateway
       tag: 2
     imageCredentials:
-      name: "docker.sandbox2.apimgcp.com"
-      registry: "docker.sandbox2.apimgcp.com"
+      name: "docker.sandbox3.apimgcp.com"
+      registry: "docker.sandbox3.apimgcp.com"
       username: "admin"
     hazelcast:
       enabled: false
