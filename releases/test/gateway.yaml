@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: gateway-test
   chart:
-    git: git@github.com:J-Lou/public-env-config
+    git: git@github.com:J-Lou/public-env-config.git
     path: charts/gateway
     ref: master
   valuesFrom:
@@ -26,8 +26,8 @@ spec:
   values:
     replicaCount: 1
     container:
-      image: docker.sandbox3.apimgcp.com/repo/gateway
-      tag: '0.1'
+      image: docker.sandbox3.apimgcp.com/repository/docker-hosted/gateway
+      tag: 'V2'
     imageCredentials:
       name: "docker.sandbox3.apimgcp.com"
       registry: "docker.sandbox3.apimgcp.com"
