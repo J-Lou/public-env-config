@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: gateway-test
   chart:
-    git: git@github.com:J-Lou/public-env-config.git
+    git: git@github.com:J-Lou/public-env-config
     path: charts/gateway
     ref: master
   valuesFrom:
