@@ -42,9 +42,6 @@ spec:
         - name: https
           internal: 8443
           external: 443
-        - name: custom-http
-          internal: 12345
-          external: 12345
     gateway:
       license:
         accept: "true"
