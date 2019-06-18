@@ -5,11 +5,11 @@ metadata:
   name: gateway-test
   namespace: test
   annotations:
-    flux.weave.works/automated: "true"
+    flux.weave.works/automated: "false"
     flux.weave.works/tag.container: semver:*
 spec:
   releaseName: gateway-test
- chart:
+  chart:
     git: git@github.com:J-Lou/public-env-config                                 # Repository where your Gateway Helm Chart is located, e.g. git@github.com:wynnel/puma-example-environment-configuration
     path: charts/gateway
     ref: master
@@ -27,7 +27,7 @@ spec:
     replicaCount: 1
     container:
       image: docker.sandbox3.apimgcp.com/repository/docker-hosted/gateway     # Repository name, e.g docker.sandbox2.apimgcp.com
-      tag: '8'                                       # Image tag version, e.g 1.0
+      tag: '12'                                       # Image tag version, e.g 1.0
     imageCredentials:
       name: "docker.sandbox3.apimgcp.com"                                     # Repository name, e.g docker.sandbox2.apimgcp.com
       registry: "docker.sandbox3.apimgcp.com"                                 # Repository name, e.g docker.sandbox2.apimgcp.com
