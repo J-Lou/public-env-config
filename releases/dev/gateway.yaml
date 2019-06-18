@@ -11,7 +11,7 @@ spec:
   releaseName: gateway-dev
   forceUpgrade: true
   chart:
-    git: git@github.com:J-Lou/public-env-config
+    git: git@github.com:J-Lou/public-env-config                                 # Repository where your Gateway Helm Chart is located, e.g. git@github.com:wynnel/puma-example-environment-configuration
     path: charts/gateway
     ref: master
   valuesFrom:
@@ -27,12 +27,12 @@ spec:
   values:
     replicaCount: 1
     container:
-      image: docker.sandbox3.apimgcp.com/repository/docker-hosted/gateway
-      tag: '8'
+      image: docker.sandbox3.apimgcp.com/repository/docker-hosted/gateway     # Repository name, e.g docker.sandbox2.apimgcp.com
+      tag: '10'                                       # Image tag version, e.g 1.0
     imageCredentials:
-      name: "docker.sandbox3.apimgcp.com"
-      registry: "docker.sandbox3.apimgcp.com"
-      username: "admin"
+      name: "docker.sandbox3.apimgcp.com"                                     # Repository name, e.g docker.sandbox2.apimgcp.com
+      registry: "docker.sandbox3.apimgcp.com"                                 # Repository name, e.g docker.sandbox2.apimgcp.com
+      username: "admin"                           # Repository login credential, e.g admin
     hazelcast:
       enabled: false
     service:
@@ -46,7 +46,6 @@ spec:
       - name: admin-port
         internal: 9443
         external: 9443
-
 
 
 

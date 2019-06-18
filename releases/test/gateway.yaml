@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: gateway-test
   chart:
-    git: git@github.com:J-Lou/public-env-config
+    git: git@github.com:<your repo>                                 # Repository where your Gateway Helm Chart is located, e.g. git@github.com:wynnel/puma-example-environment-configuration
     path: charts/gateway
     ref: master
   valuesFrom:
@@ -26,12 +26,12 @@ spec:
   values:
     replicaCount: 1
     container:
-      image: docker.sandbox3.apimgcp.com/repository/docker-hosted/gateway
-      tag: '1'
+      image: <your repository>/repository/docker-hosted/gateway     # Repository name, e.g docker.sandbox2.apimgcp.com
+      tag: '<your image tag>'                                       # Image tag version, e.g 1.0
     imageCredentials:
-      name: "docker.sandbox3.apimgcp.com"
-      registry: "docker.sandbox3.apimgcp.com"
-      username: "admin"
+      name: "<your repository>"                                     # Repository name, e.g docker.sandbox2.apimgcp.com
+      registry: "<your repository>"                                 # Repository name, e.g docker.sandbox2.apimgcp.com
+      username: "<your repository login>"                           # Repository login credential, e.g admin
     hazelcast:
       enabled: false
     service:  
@@ -42,3 +42,5 @@ spec:
         - name: https
           internal: 8443
           external: 443
+
+
